@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importar tipografias */
+/* variables de css → paleta de colores */
+/* condiciones iniciales (opcional) */
+
+/* FUENTE */
+@import url('https://fonts.cdnfonts.com/css/amoera');
+:root {
+    --font: 'amoera', sans-serif;
+    --primary-color: #FFDFBA;
+    --secundary-color: #F3DD24;
+    --light-background: #FCF9ED;
+}
+
+body {
+    background-color: var(--light-background);
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
