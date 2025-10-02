@@ -2,6 +2,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Product } from '../interfaces/product';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class ProductsService {
   private _httpClient = inject(HttpClient);
 
   // 2. Definir la ruta de acceso al back
-  private apiUrl = 'http://localhost:3000'; //url general del backend
+  private apiUrl = environment.apiUrl; //url general del backend
 
   // 3. Metodo para hacer las peticiones
 
@@ -25,10 +26,10 @@ export class ProductsService {
   };
   // petición Put
   putProduct(productToUpdate: Product, id: string){
-    return this._httpClient.put(this.apiUrl + '/products/actualizar/' + id, productToUpdate);
+    return this._httpClient.put(this.apiUrl + '/products/actualizar/' + id, productToUpdate); //También se puede con backsticks
   };
   // petición Delete
   deleteProduct(id: string){
-    return this._httpClient.delete(this.apiUrl + '/products/eliminar/' + id)
+    return this._httpClient.delete(this.apiUrl + '/products/eliminar/', {params: {id}}); //Opción 3
   };
 }
