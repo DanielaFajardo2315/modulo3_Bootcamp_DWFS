@@ -1,1 +1,16 @@
-<p>card works!</p>
+<section class="row">
+    @for (item of allProducts; track $index) {
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src={{item.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.description}}</p>
+                <p class="card-text">{{item.material}}</p>
+                <p class="card-text">{{item.height}}</p>
+                <a href="#" class="btn btn-primary">{{item.price}}</a>
+            </div>
+        </div>
+    </div>
+    }
+</section>
