@@ -10,12 +10,22 @@
     --primary-color: #FFDFBA;
     --secundary-color: #F3DD24;
     --light-background: #FCF9ED;
+    --button_color: #6CB6D4;
+    --white: #FFFFFF;
+    --text-dark: #2C2C2C;
+    --text-light: #6C757D;
+    --gradient-primary: radial-gradient(circle,rgba(252, 249, 237, 1) 0%, rgba(255, 223, 186, 1) 50%, rgba(243, 221, 36, 1) 100%);
 }
 
-body {
-    background-color: var(--light-background);
-    font-family: var(--font);
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    font-family: var(--font);
+    color: var(--text-dark);
+    overflow-x: hidden;
 }

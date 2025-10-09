@@ -1,0 +1,19 @@
+/* Banner */
+.banner {
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--light-background);
+}
+
+/* Prodcutos */
+.productos {
+    width: 100vw;
+    height: 80vh;
+}
+
+/* Llamado a la acción */
+.llamado-accion {
+    width: 100vw;
+    height: 70vh;
+    background-color: var(--secundary-color);
+}

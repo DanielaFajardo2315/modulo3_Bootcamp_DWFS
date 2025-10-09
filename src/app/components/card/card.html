@@ -1,8 +1,11 @@
 <section class="row">
     @for (item of allProducts; track $index) {
+        <!--contenido dinámico: cambia dependiendo de la base de datos
+        interpolación: {{poner la variable que se quiere mostrar}}-->
     <div class="col">
         <div class="card" style="width: 18rem;">
-            <img src={{item.image}} class="card-img-top" alt="...">
+            <!-- [Prepara para recibir contenido del ts] -->
+            <img [src]="baseURL + item.image" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{item.title}}</h5>
                 <p class="card-text">{{item.description}}</p>

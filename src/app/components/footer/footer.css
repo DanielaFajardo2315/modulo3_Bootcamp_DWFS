@@ -1,0 +1,19 @@
+.cont-footer {
+    width: 100vw;
+    height: 150px;
+    background-color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociales i {
+    color: var(--white);
+}
