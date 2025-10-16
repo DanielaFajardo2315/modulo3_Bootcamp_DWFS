@@ -6,10 +6,12 @@ import { Login } from './pages/login/login';
 import { NotFound } from './pages/not-found/not-found';
 import { Products } from './pages/products/products';
 import { Register } from './pages/register/register';
+// importar el guardian y especificar que rutas son protegidas
+import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
   { path: '', component: Home, title: 'Inicio' },
-  { path: 'administracion', component: Admin, title: 'Administración' },
+  { path: 'administracion', component: Admin, title: 'Administración', canActivate: [authGuard] },
   { path: 'inicioSesion', component: Login, title: 'Inicio de sesión' },
   { path: 'productos', component: Products, title: 'Productos' },
   { path: 'registro', component: Register, title: 'Registro' },
