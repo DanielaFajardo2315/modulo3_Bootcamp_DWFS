@@ -1,0 +1,24 @@
+<h1>GESTIÓN DE USUARIOS</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th class="p-2 text-center">Nombre</th>
+      <th class="p-2 text-center">Nombre de usuario</th>
+      <th class="p-2 text-center">Email</th>
+      <th class="p-2 text-center">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of allUsers; track $index) {
+        <tr>
+            <td class="p-1">{{ user.name }}</td>
+            <td class="p-1">{{user.username}}</td>
+            <td class="p-1">{{ user.email }}</td>
+            <td class="p-1">
+            <button>Actualizar</button>
+            <button (click)="deleteUser(user._id)">Eliminar</button>
+            </td>
+        </tr>
+    }
+  </tbody>

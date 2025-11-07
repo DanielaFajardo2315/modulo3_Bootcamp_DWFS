@@ -1,1 +1,33 @@
-<p>register works!</p>
+<main>
+    <form class="formulario" [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+        <h1>Registro</h1>
+        <!-- Nombre completo -->
+        <div class="mb-3">
+            <label class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Ingrese su nombre completo" autocomplete="name" [class.is-invalid]="registerForm.get('name')?.touched && registerForm.get('name')?.invalid">
+        </div>
+        <!-- Nombre de usuario -->
+        <div class="mb-3">
+            <label class="form-label">Nombre de usuario</label>
+            <input type="text" class="form-control" formControlName="username" placeholder="Ingrese su nombre de usuario" autocomplete="username" [class.is-invalid]="registerForm.get('username')?.touched && registerForm.get('username')?.invalid">
+        </div>
+        <!-- Edad -->
+        <div class="mb-3">
+            <label class="form-label">Edad</label>
+            <input type="number" class="form-control" formControlName="age" placeholder="Ingrese su edad">
+        </div>
+        <!-- Correo -->
+        <div class="mb-3">
+            <label class="form-label">Correo electónico</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Ingrese su correo" autocomplete="email" [class.is-invalid]="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+        </div>
+        <!-- Contraseña -->
+        <div class="mb-3">
+            <label class="form-label">Contraseña</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Ingrese una contraseña" autocomplete="new-password" [class.is-invalid]="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+        </div>
+        <!-- Validaciones vanilla, y formularios basados en plantillas Template Form: required -->
+        <!-- Botón inicio de sesión -->
+        <button type="submit" class="btn">Registrarse</button>
+    </form>
+</main>

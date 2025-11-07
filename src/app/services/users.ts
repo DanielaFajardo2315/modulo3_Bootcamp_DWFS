@@ -23,6 +23,6 @@ export class UsersService {
   };
 
   deleteUser(id: string){
-    return this._httpClient.delete(this.apiUrl + '/users/', {params:{id}});
+    return this._httpClient.delete(this.apiUrl + '/users/' + id);
   };
 }

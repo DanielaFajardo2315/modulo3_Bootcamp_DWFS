@@ -1,10 +1,14 @@
 <!-- header: encabezado -->
+@if (!isInvisible) {
 <header>
   <app-navbar></app-navbar>
 </header>
+}
 
 <router-outlet />
 <!-- footer: pie de página -->
+@if (!isInvisible) {
 <footer>
   <app-footer></app-footer>
 </footer>
+}

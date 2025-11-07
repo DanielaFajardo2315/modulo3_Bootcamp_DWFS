@@ -1,0 +1,28 @@
+.contenedor-nav{
+    width: 250px;
+    background: var(--gradient-primary);
+}
+
+h3{
+    font-weight: bold;
+}
+
+a {
+    color: var(--text-dark);
+}
+
+a:hover {
+    background-color: var(--button_color);
+    border-radius: 20px;
+    color: var(--white);
+}
+
+.nav-link.active {
+    background-color: var(--button_color);
+    border-radius: 20px;
+    color: var(--white);
+}
+
+.cursor {
+    cursor: pointer;
+}
